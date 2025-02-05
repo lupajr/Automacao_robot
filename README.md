@@ -1,4 +1,4 @@
-### Automation - Robot Framework com Browser Library
+# Automation - Robot Framework com Browser Library
 
 Este repositório contém testes automatizados utilizando Robot Framework com a Browser Library.
 
