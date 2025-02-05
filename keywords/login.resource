@@ -1,10 +1,12 @@
 *** Settings ***
-Library    Browser
+Library      Browser
+Variables    ../page/login.yaml
 
 *** Keywords ***
-Abrir Navegador
+que abro Navegador
     New Browser    chromium    headless=False
     New Page       https://front.serverest.dev/login
 
-Fechar Navegador
+
+o navegador irá fechar 
     Close Browser
