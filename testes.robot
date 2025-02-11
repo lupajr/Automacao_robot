@@ -2,6 +2,7 @@ language:brazilian portuguese
 *** Settings ***
 Resource    ./keywords/login.Resource
 Resource    ./keywords/cadastro.resource
+Resource    ./keywords/loja.resource
 
 
 *** Test Cases ***
@@ -18,7 +19,7 @@ cenário: teste de cadastro bem-sucedido
     E o navegador irá fechar 
 
 
-cenário: Teste de Login Bem-sucedido
+cenário: teste de Login Bem-sucedido
     [tags]    @teste
     Dado que abro Navegador
     Quando insiro um email valido
@@ -26,3 +27,8 @@ cenário: Teste de Login Bem-sucedido
     E clico em entrar 
     Então deverá aparecer mensagem de sucesso
 
+cenário: adicionando item ao carrinho
+    [tags]    @teste
+    Dado que esteja logado no sistema
+    Quando selecionar para adicionar um produto no carrinho
+    Então deverá ter um produto no carrinho

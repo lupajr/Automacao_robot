@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.0 on win32)" generated="2025-02-10T22:36:15.149522" rpa="false" schemaversion="5">
+<suite id="s1" name="Testes" source="C:\Users\theca\OneDrive\Documentos\programaçao\Automação_robot\testes.robot">
+<test id="s1-t1" name="cenário: teste de cadastro bem-sucedido" line="10">
+<kw name="Dado que abro Navegador" owner="login">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-02-10T22:36:15.453849" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\theca\\OneDrive\\Documentos\\programa\u00e7ao\\Automa\u00e7\u00e3o_robot\\browser\\traces\\temp\\a3b9dc21-113b-41af-aa40-7d8feb6985dc"}</msg>
+<msg time="2025-02-10T22:36:15.485479" level="INFO">Starting Browser process C:\Users\theca\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper\index.js using port 62289</msg>
+<msg time="2025-02-10T22:36:15.485479" level="INFO">Node startup parameters: ['node', 'C:\\Users\\theca\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\Browser\\wrapper\\index.js', '62289']</msg>
+<msg time="2025-02-10T22:36:16.953706" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\theca\\OneDrive\\Documentos\\programaçao\\Automação_robot\\browser\\traces\\temp\\a3b9dc21-113b-41af-aa40-7d8feb6985dc"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-02-10T22:36:15.452773" elapsed="1.500933"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-02-10T22:36:19.256646" level="INFO">Successfully initialized new page object and opened url: https://front.serverest.dev/login</msg>
+<msg time="2025-02-10T22:36:19.256646" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>https://front.serverest.dev/login</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-02-10T22:36:16.954700" elapsed="2.303036"/>
+</kw>
+<status status="PASS" start="2025-02-10T22:36:15.452773" elapsed="3.804963"/>
+</kw>
+<kw name="Quando clico em cadastre-se" owner="cadastro">
+<kw name="Click" owner="Browser">
+<msg time="2025-02-10T22:36:19.258750" level="INFO">Clicks the element '//a[@data-testid="cadastrar"]'.</msg>
+<arg>${button_cadastrar-se}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-10T22:36:19.257736" elapsed="0.234870"/>
+</kw>
+<status status="PASS" start="2025-02-10T22:36:19.257736" elapsed="0.236221"/>
+</kw>
+<kw name="E digito um nome" owner="cadastro">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-02-10T22:36:19.494698" level="INFO">Fills the text 'carlos luis' in the given field.</msg>
+<arg>${input_cadastro_nome}</arg>
+<arg>${nome}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-02-10T22:36:19.494698" elapsed="0.024823"/>
+</kw>
+<status status="PASS" start="2025-02-10T22:36:19.493957" elapsed="0.025564"/>
+</kw>
+<kw name="E digito um email" owner="cadastro">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-02-10T22:36:19.521966" level="INFO">Fills the text 'carlos@fake.com' in the given field.</msg>
+<arg>${input_cadastro_email}</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-02-10T22:36:19.520909" elapsed="0.018881"/>
+</kw>
+<status status="PASS" start="2025-02-10T22:36:19.520909" elapsed="0.018881"/>
+</kw>
+<kw name="E digito uma senha" owner="cadastro">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-02-10T22:36:19.541309" level="INFO">Fills the text 'mudar123' in the given field.</msg>
+<arg>${input_cadastro_senha}</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-02-10T22:36:19.539790" elapsed="0.017803"/>
+</kw>
+<status status="PASS" start="2025-02-10T22:36:19.539790" elapsed="0.017803"/>
+</kw>
+<kw name="E clico em cadastrar" owner="cadastro">
+<kw name="Click" owner="Browser">
+<msg time="2025-02-10T22:36:19.560060" level="INFO">Clicks the element '//button[@data-testid="cadastrar"]'.</msg>
+<arg>${button_cadastrar}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-10T22:36:19.559039" elapsed="0.041967"/>
+</kw>
+<status status="PASS" start="2025-02-10T22:36:19.559039" elapsed="0.041967"/>
+</kw>
+<kw name="Então deverá ser criada uma conta" owner="cadastro">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-10T22:36:22.855134" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-10T22:36:22.855134" level="INFO">See also file:///C:/Users/theca/OneDrive/Documentos/programa%C3%A7ao/Automa%C3%A7%C3%A3o_robot/playwright-log.txt for additional details.</msg>
+<msg time="2025-02-10T22:36:22.856142" level="FAIL">TimeoutError: locator.waitFor: Timeout 3000ms exceeded.
+Call log:
+  - waiting for locator('//button[@data-testid="botaoPesquisar"]') to be visible
+</msg>
+<arg>${button_pesquisar}</arg>
+<arg>visible</arg>
+<arg>timeout=3s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="FAIL" start="2025-02-10T22:36:19.602091" elapsed="3.259440">TimeoutError: locator.waitFor: Timeout 3000ms exceeded.
+Call log:
+  - waiting for locator('//button[@data-testid="botaoPesquisar"]') to be visible
+</status>
+</kw>
+<msg time="2025-02-10T22:36:22.861531" level="INFO">${visivel} = False</msg>
+<var>${visivel}</var>
+<arg>Wait For Elements State</arg>
+<arg>${button_pesquisar}</arg>
+<arg>visible</arg>
+<arg>timeout=3s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-02-10T22:36:19.602091" elapsed="3.259440"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-02-10T22:36:23.126351" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-10T22:36:22.862543" elapsed="0.263808"/>
+</kw>
+<arg>'${visivel}' == 'False'</arg>
+<arg>Close Browser</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-02-10T22:36:22.861531" elapsed="0.264820"/>
+</kw>
+<status status="PASS" start="2025-02-10T22:36:19.601006" elapsed="3.525345"/>
+</kw>
+<kw name="E o navegador irá fechar" owner="login">
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-02-10T22:36:23.130784" level="INFO">No browser open, doing nothing</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-10T22:36:23.127346" elapsed="0.003438"/>
+</kw>
+<status status="PASS" start="2025-02-10T22:36:23.126351" elapsed="0.005562"/>
+</kw>
+<tag>@teste</tag>
+<status status="PASS" start="2025-02-10T22:36:15.451265" elapsed="7.680648"/>
+</test>
+<test id="s1-t2" name="cenário: teste de Login Bem-sucedido" line="22">
+<kw name="Dado que abro Navegador" owner="login">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-02-10T22:36:23.167612" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\theca\\OneDrive\\Documentos\\programa\u00e7ao\\Automa\u00e7\u00e3o_robot\\browser\\traces\\temp\\2c9327a3-94fa-4304-a4a7-8255b04ef8fe"}</msg>
+<msg time="2025-02-10T22:36:23.440742" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\theca\\OneDrive\\Documentos\\programaçao\\Automação_robot\\browser\\traces\\temp\\2c9327a3-94fa-4304-a4a7-8255b04ef8fe"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-02-10T22:36:23.166106" elapsed="0.274636"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-02-10T22:36:28.630223" level="INFO">Successfully initialized new page object and opened url: https://front.serverest.dev/login</msg>
+<msg time="2025-02-10T22:36:28.630223" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>https://front.serverest.dev/login</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-02-10T22:36:23.441742" elapsed="5.188481"/>
+</kw>
+<status status="PASS" start="2025-02-10T22:36:23.166106" elapsed="5.465572"/>
+</kw>
+<kw name="Quando insiro um email valido" owner="login">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-02-10T22:36:28.633062" level="INFO">Fills the text 'carlos@fake.com' in the given field.</msg>
+<arg>${input_login_email}</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-02-10T22:36:28.631678" elapsed="0.255170"/>
+</kw>
+<status status="PASS" start="2025-02-10T22:36:28.631678" elapsed="0.255170"/>
+</kw>
+<kw name="E insiro uma senha" owner="login">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-02-10T22:36:28.889347" level="INFO">Fills the text 'mudar123' in the given field.</msg>
+<arg>${input_login_senha}</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-02-10T22:36:28.888330" elapsed="0.019659"/>
+</kw>
+<status status="PASS" start="2025-02-10T22:36:28.886848" elapsed="0.021141"/>
+</kw>
+<kw name="E clico em entrar" owner="login">
+<kw name="Click" owner="Browser">
+<msg time="2025-02-10T22:36:28.910041" level="INFO">Clicks the element '//button[@data-testid="entrar"]'.</msg>
+<arg>${button_entrar}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-10T22:36:28.909011" elapsed="0.063209"/>
+</kw>
+<status status="PASS" start="2025-02-10T22:36:28.909011" elapsed="0.063209"/>
+</kw>
+<kw name="Então deverá aparecer mensagem de sucesso" owner="login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-10T22:36:30.329969" level="INFO">Waited for Element with selector //button[@data-testid="botaoPesquisar"] at state visible</msg>
+<arg>${button_pesquisar}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-10T22:36:28.973300" elapsed="1.356669"/>
+</kw>
+<status status="PASS" start="2025-02-10T22:36:28.972220" elapsed="1.357749"/>
+</kw>
+<tag>@teste</tag>
+<status status="PASS" start="2025-02-10T22:36:23.163781" elapsed="7.167210"/>
+</test>
+<test id="s1-t3" name="cenário: adicionando itens ao carrinho" line="30">
+<kw name="Dado que esteja logado no sistema" owner="loja">
+<kw name="que abro Navegador" owner="login">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-02-10T22:36:30.404069" level="INFO">Switching browser to browser=867177e1-0c36-4f40-9458-6c025efd206d</msg>
+<msg time="2025-02-10T22:36:30.407845" level="INFO">Successfully changed active browser: browser=867177e1-0c36-4f40-9458-6c025efd206d</msg>
+<msg time="2025-02-10T22:36:30.407845" level="INFO">Reusing existing browser with id: browser=867177e1-0c36-4f40-9458-6c025efd206d</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-02-10T22:36:30.403006" elapsed="0.004839"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-02-10T22:36:32.638707" level="INFO">Successfully initialized new page object and opened url: https://front.serverest.dev/login</msg>
+<msg time="2025-02-10T22:36:32.638707" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>https://front.serverest.dev/login</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-02-10T22:36:30.407845" elapsed="2.230862"/>
+</kw>
+<status status="PASS" start="2025-02-10T22:36:30.403006" elapsed="2.235701"/>
+</kw>
+<kw name="insiro um email valido" owner="login">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-02-10T22:36:32.640218" level="INFO">Fills the text 'carlos@fake.com' in the given field.</msg>
+<arg>${input_login_email}</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-02-10T22:36:32.640218" elapsed="0.203713"/>
+</kw>
+<status status="PASS" start="2025-02-10T22:36:32.638707" elapsed="0.205224"/>
+</kw>
+<kw name="insiro uma senha" owner="login">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-02-10T22:36:32.844926" level="INFO">Fills the text 'mudar123' in the given field.</msg>
+<arg>${input_login_senha}</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-02-10T22:36:32.843931" elapsed="0.014889"/>
+</kw>
+<status status="PASS" start="2025-02-10T22:36:32.843931" elapsed="0.014889"/>
+</kw>
+<kw name="clico em entrar" owner="login">
+<kw name="Click" owner="Browser">
+<msg time="2025-02-10T22:36:32.860815" level="INFO">Clicks the element '//button[@data-testid="entrar"]'.</msg>
+<arg>${button_entrar}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-10T22:36:32.859824" elapsed="0.045054"/>
+</kw>
+<status status="PASS" start="2025-02-10T22:36:32.858820" elapsed="0.046058"/>
+</kw>
+<kw name="deverá aparecer mensagem de sucesso" owner="login">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-02-10T22:36:34.249599" level="INFO">Waited for Element with selector //button[@data-testid="botaoPesquisar"] at state visible</msg>
+<arg>${button_pesquisar}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-02-10T22:36:32.905870" elapsed="1.343729"/>
+</kw>
+<status status="PASS" start="2025-02-10T22:36:32.904878" elapsed="1.344721"/>
+</kw>
+<status status="PASS" start="2025-02-10T22:36:30.401958" elapsed="3.847641"/>
+</kw>
+<tag>@teste</tag>
+<status status="PASS" start="2025-02-10T22:36:30.398417" elapsed="3.851182"/>
+</test>
+<status status="PASS" start="2025-02-10T22:36:15.151527" elapsed="19.151877"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="3" fail="0" skip="0">@teste</stat>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Testes">Testes</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
