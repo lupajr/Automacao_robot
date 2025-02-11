@@ -3,5 +3,5 @@ button_cadastrar:        //button[@data-testid="cadastrar"]
 input_cadastro_nome:     input[data-testid="nome"]
 input_cadastro_email:    input[data-testid="email"]
 input_cadastro_senha:    input[data-testid="password"]
-button_pesquisar:        //button[@data-testid="botaoPesquisar"]
+
 

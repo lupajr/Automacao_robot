@@ -1,0 +1,3 @@
+input_login_email:  //*[@data-testid="email"]
+input_login_senha:  //*[@data-testid="senha"]
+button_entrar:      //button[@data-testid="entrar"]

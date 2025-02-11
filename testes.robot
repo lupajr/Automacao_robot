@@ -5,17 +5,9 @@ Resource    ./keywords/cadastro.resource
 
 
 *** Test Cases ***
-cenário: Teste de Login Bem-sucedido
-    [tags]    @teste
-    Dado que abro Navegador
-    Quando insiro um email valido
-    E insiro uma senha 
-    E clico em entrar 
-    Então deverá aparecer mensagem de sucesso
-
 
 cenário: teste de cadastro bem-sucedido
-    [tags]    @teste   testado
+    [tags]    @teste  
     Dado que abro Navegador
     Quando clico em cadastre-se 
     E digito um nome
@@ -24,3 +16,13 @@ cenário: teste de cadastro bem-sucedido
     E clico em cadastrar
     Então deverá ser criada uma conta
     E o navegador irá fechar 
+
+
+cenário: Teste de Login Bem-sucedido
+    [tags]    @teste
+    Dado que abro Navegador
+    Quando insiro um email valido
+    E insiro uma senha 
+    E clico em entrar 
+    Então deverá aparecer mensagem de sucesso
+
