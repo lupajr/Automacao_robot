@@ -66,5 +66,5 @@ robot -d results tests/seu_teste.robot
 Este projeto está sob a licença **MIT** - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ---
-✍️ Criado por [Seu Nome](https://github.com/seu-usuario)
+✍️ Criado por [Luiz Paulo](https://github.com/lupajr)
 
