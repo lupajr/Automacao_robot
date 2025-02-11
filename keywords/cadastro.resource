@@ -1,7 +1,7 @@
 *** Settings ***
 Library      Browser
-Variables    ../page/login.yaml
 Variables    ../page/cadastro.yaml
+Variables    ../page/loja.yaml
 Resource     ../resource/variaveis.resource
 
 *** Keywords ***
