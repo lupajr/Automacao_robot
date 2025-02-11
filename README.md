@@ -1,61 +1,70 @@
 # Automation - Robot Framework com Browser Library
 
-Este repositório contém testes automatizados utilizando Robot Framework com a Browser Library.
+Este repositório contém testes automatizados utilizando **Robot Framework** com a **Browser Library**.
 
-Tecnologias Utilizadas
+## 🚀 Tecnologias Utilizadas
 
-Robot Framework
+- **Robot Framework**
+- **Browser Library**
+- **Python**
 
-Browser Library
-
-Python
-
-Requisitos
+## 📌 Requisitos
 
 Certifique-se de ter instalado os seguintes requisitos:
 
-Python 3.8+
+- **Python 3.8+**
+- **Node.js** (necessário para a Browser Library)
+- **npm** (vem junto com o Node.js)
+- **pip**
 
-Node.js (necessário para a Browser Library)
+## 🔧 Instalação
 
-npm (vem junto com o Node.js)
+1. **Clone o repositório:**
+   ```sh
+   git clone https://github.com/seu-usuario/seu-repositorio.git
+   cd seu-repositorio
+   ```
 
-pip
+2. **Crie um ambiente virtual e ative-o:**
 
-Instalação
+   **No Windows:**
+   ```sh
+   python -m venv venv
+   venv\Scripts\activate
+   ```
 
-Clone o repositório:
+   **No macOS/Linux:**
+   ```sh
+   python -m venv venv
+   source venv/bin/activate
+   ```
 
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
+3. **Instale as dependências do projeto:**
+   ```sh
+   pip install -r requirements.txt
+   ```
 
-Crie um ambiente virtual e ative-o:
+4. **Instale a Browser Library:**
+   ```sh
+   rfbrowser init
+   ```
 
-python -m venv venv
-# No Windows
-venv\Scripts\activate
-# No macOS/Linux
-source venv/bin/activate
+## ▶️ Executando os Testes
 
-Instale as dependências do projeto:
-
-pip install -r requirements.txt
-
-Instale a Browser Library:
-
-rfbrowser init
-
-Executando os Testes
-
-Para executar os testes, utilize o seguinte comando:
-
+Para executar todos os testes, utilize o seguinte comando:
+```sh
 robot -d results tests/
+```
 
-Ou, para um teste específico:
-
+Ou, para executar um teste específico:
+```sh
 robot -d results tests/seu_teste.robot
+```
 
-Licença
+## 📜 Licença
 
-Este projeto está sob a licença MIT - veja o arquivo LICENSE para mais detalhes.
+Este projeto está sob a licença **MIT** - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+✍️ Criado por [Seu Nome](https://github.com/seu-usuario)
 
