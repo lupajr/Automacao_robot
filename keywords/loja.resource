@@ -1,5 +1,7 @@
 *** Settings ***
 Library      Browser
+Library    DebugLibrary
+Library    String
 Variables    ../page/login.yaml
 Variables    ../page/loja.yaml
 Resource     ../resource/variaveis.resource
@@ -14,7 +16,11 @@ que esteja logado no sistema
     clico em entrar 
     deverá aparecer mensagem de sucesso
 
-selecionar para adicionar um produto no carrinho
-    Click    selector
-deverá ter um produto no carrinho
-    Wait For Elements State    selector
+selecionar para adicionar um produto na lista de compras 
+    ${elementos}    Get Elements    ${button_adicionar_a_lista}  
+    ${indice_aleatorio}    Evaluate    random.randint(0, len(${elementos}) - 1)  
+    Click    ${elementos}[${indice_aleatorio}]  
+
+deverá ter um produto na lista de compras 
+    Wait For Elements State    ${txt_produto}    visible 
+    Should Contain   ${txt_produto}    Produto
