@@ -1,4 +1,4 @@
-name: Run Robot Framework Tests with Playwright (Headless)
+name: Run Robot Framework Tests with Playwright
 
 on:
   pull_request:
@@ -26,6 +26,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install robotframework  # Instala o Robot Framework
           pip install robotframework-browser  # Instala o Robot Framework com o Playwright
+          pip install robotframework-debuglibrary  # Instala o DebugLibrary
+          pip install pyyaml  # Instala o PyYAML
 
       # Passo 4: Inicializar o Browser (Playwright) em modo headless
       - name: Initialize Playwright Browser in headless mode
