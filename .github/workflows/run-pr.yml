@@ -1,0 +1,40 @@
+name: Run Robot Framework Tests
+
+on:
+  pull_request:
+    branches:
+      - main  # Defina a branch alvo para o PR (por exemplo, `main`)
+
+jobs:
+  test:
+    runs-on: ubuntu-latest  # Pode ser `ubuntu-latest`, `windows-latest`, ou `macos-latest`
+    
+    steps:
+      # Passo 1: Checkout do código
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      # Passo 2: Configurar Python
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'  # Defina a versão do Python que você precisa (pode ser `3.x` ou outra versão específica)
+
+      # Passo 3: Instalar dependências
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install robotframework  # Instala o Robot Framework
+          pip install -r requirements.txt  # Caso tenha outras dependências em `requirements.txt`
+
+      # Passo 4: Rodar os testes
+      - name: Run Robot Framework Tests
+        run: |
+          robot --include testes testes.robot  # Comando para rodar seus testes
+          
+      # Passo 5: Verificar os resultados (opcional)
+      - name: Upload Test Results (se necessário)
+        uses: actions/upload-artifact@v2
+        with:
+          name: robot-test-results
+          path: result.xml  # Se você gerar um arquivo XML com o resultado, como um relatório de testes
