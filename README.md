@@ -39,12 +39,7 @@ Certifique-se de ter instalado os seguintes requisitos:
    source venv/bin/activate
    ```
 
-3. **Instale as dependências do projeto:**
-   ```sh
-   pip install -r requirements.txt
-   ```
-
-4. **Instale a Browser Library:**
+3. **Instale a Browser Library:**
    ```sh
    rfbrowser init
    ```
