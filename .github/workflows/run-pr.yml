@@ -26,7 +26,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install robotframework  # Instala o Robot Framework
           pip install robotframework-playwright  # Instala o Robot Framework com o Playwright
-          pip install -r requirements.txt  # Caso tenha outras dependências em `requirements.txt`
 
       # Passo 4: Baixar o navegador necessário (Playwright)
       - name: Install Playwright Browsers
