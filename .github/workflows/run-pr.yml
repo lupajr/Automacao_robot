@@ -25,12 +25,12 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install robotframework  # Instala o Robot Framework
-          pip install robotframework-playwright  # Instala o Robot Framework com o Playwright
+          pip install robotframework-browser  # Instala o Robot Framework com o Playwright
 
-      # Passo 4: Baixar o navegador necessário (Playwright)
-      - name: Install Playwright Browsers
+      # Passo 4: Inicializar o Browser (Playwright)
+      - name: Initialize Playwright Browser
         run: |
-          python -m playwright install  # Baixa o navegador necessário (Chromium, Firefox, WebKit)
+          rfbrowser init  # Inicializa o navegador com o Playwright
 
       # Passo 5: Rodar os testes
       - name: Run Robot Framework Tests
