@@ -1,8 +1,8 @@
 language:brazilian portuguese
 *** Settings ***
-Resource    ./keywords/login.Resource
-Resource    ./keywords/cadastro.resource
-Resource    ./keywords/loja.resource
+Resource    keywords/login.Resource
+Resource    keywords/cadastro.resource
+Resource    keywords/loja.resource
 Library     DebugLibrary
 
 *** Test Cases ***
