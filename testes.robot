@@ -1,6 +1,6 @@
 language:brazilian portuguese
 *** Settings ***
-Resource    keywords/login.Resource
+Resource    keywords/login.resource
 Resource    keywords/cadastro.resource
 Resource    keywords/loja.resource
 Library     DebugLibrary
