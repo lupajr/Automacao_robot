@@ -6,7 +6,7 @@ Resource     ../resource/variaveis.resource
 
 *** Keywords ***
 que abro Navegador
-    New Browser    chromium    headless=False
+    New Browser    chromium    headless=True
     New Page       https://front.serverest.dev/login
 insiro um email valido
     Fill Text    ${input_login_email}    ${email}
@@ -18,4 +18,3 @@ deverá aparecer mensagem de sucesso
     Wait For Elements State    ${button_pesquisar}    visible
 o navegador irá fechar 
     Close Browser
-

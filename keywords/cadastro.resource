@@ -20,3 +20,4 @@ clico em cadastrar
 deverá ser criada uma conta
     ${visivel}    Run Keyword And Return Status    Wait For Elements State    ${button_pesquisar}    visible    timeout=3s
     Run Keyword If    '${visivel}' == 'False'    Close Browser
+    

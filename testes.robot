@@ -1,8 +1,8 @@
 language:brazilian portuguese
 *** Settings ***
-Resource    ./keywords/login.Resource
-Resource    ./keywords/cadastro.resource
-Resource    ./keywords/loja.resource
+Resource    keywords/login.resource
+Resource    keywords/cadastro.resource
+Resource    keywords/loja.resource
 Library     DebugLibrary
 
 *** Test Cases ***
@@ -27,7 +27,8 @@ cenário: teste de Login Bem-sucedido
     Então deverá aparecer mensagem de sucesso
 
 cenário: adicionando item a lista
-    [tags]    testes
+    [tags]    teste
     Dado que esteja logado no sistema
     Quando selecionar para adicionar um produto na lista de compras 
     Então deverá ter um produto na lista de compras 
+    

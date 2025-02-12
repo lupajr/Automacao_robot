@@ -24,3 +24,4 @@ selecionar para adicionar um produto na lista de compras
 deverá ter um produto na lista de compras 
     Wait For Elements State    ${txt_produto}    visible 
     Should Contain   ${txt_produto}    Produto
+    
