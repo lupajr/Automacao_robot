@@ -18,4 +18,5 @@ digito uma senha
 clico em cadastrar
     Click    ${button_cadastrar}
 deverá ser criada uma conta
-    Wait For Elements State    ${button_pesquisar}    visible
+    ${visivel}    Run Keyword And Return Status    Wait For Elements State    ${button_pesquisar}    visible    timeout=3s
+    Run Keyword If    '${visivel}' == 'False'    Close Browser

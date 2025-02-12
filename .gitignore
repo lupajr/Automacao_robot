@@ -1,4 +1,4 @@
-#reports
-.html
-.xml
-.txt
+# reports
+*.html
+*.xml
+*.txt
