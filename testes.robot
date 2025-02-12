@@ -18,7 +18,6 @@ cenário: teste de cadastro bem-sucedido
     Então deverá ser criada uma conta
     E o navegador irá fechar 
 
-
 cenário: teste de Login Bem-sucedido
     [tags]    teste
     Dado que abro Navegador
