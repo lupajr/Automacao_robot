@@ -36,7 +36,7 @@ jobs:
           
       # Passo 5: Verificar os resultados (opcional)
       - name: Upload Test Results (se necessário)
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: robot-test-results
           path: result.xml  # Se você gerar um arquivo XML com o resultado, como um relatório de testes
