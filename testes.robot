@@ -27,7 +27,7 @@ cenário: teste de Login Bem-sucedido
     Então deverá aparecer mensagem de sucesso
 
 cenário: adicionando item a lista
-    [tags]    testes
+    [tags]    teste
     Dado que esteja logado no sistema
     Quando selecionar para adicionar um produto na lista de compras 
     Então deverá ter um produto na lista de compras 
