@@ -31,3 +31,4 @@ cenário: adicionando item a lista
     Dado que esteja logado no sistema
     Quando selecionar para adicionar um produto na lista de compras 
     Então deverá ter um produto na lista de compras 
+    

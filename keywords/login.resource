@@ -18,4 +18,3 @@ deverá aparecer mensagem de sucesso
     Wait For Elements State    ${button_pesquisar}    visible
 o navegador irá fechar 
     Close Browser
-
