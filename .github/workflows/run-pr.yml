@@ -1,4 +1,4 @@
-name: Run Robot Framework Tests with Playwright
+name: Run Robot Framework Tests with Playwright (Headless)
 
 on:
   pull_request:
@@ -18,7 +18,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.x'  # Defina a versão do Python que você precisa (pode ser `3.x` ou outra versão específica)
+          python-version: '3.x'
 
       # Passo 3: Instalar dependências
       - name: Install dependencies
@@ -27,10 +27,11 @@ jobs:
           pip install robotframework  # Instala o Robot Framework
           pip install robotframework-browser  # Instala o Robot Framework com o Playwright
 
-      # Passo 4: Inicializar o Browser (Playwright)
-      - name: Initialize Playwright Browser
+      # Passo 4: Inicializar o Browser (Playwright) em modo headless
+      - name: Initialize Playwright Browser in headless mode
         run: |
-          rfbrowser init  # Inicializa o navegador com o Playwright
+          export HEADLESS=true  # Variável de ambiente para garantir modo headless
+          rfbrowser init  # Inicializa o navegador com Playwright
 
       # Passo 5: Rodar os testes
       - name: Run Robot Framework Tests
@@ -38,8 +39,8 @@ jobs:
           robot --include testes testes.robot  # Comando para rodar seus testes
 
       # Passo 6: Verificar os resultados (opcional)
-      - name: Upload Test Results (se necessário)
-        uses: actions/upload-artifact@v4  # Usando a versão mais recente
+      - name: Upload Test Results
+        uses: actions/upload-artifact@v4
         with:
           name: robot-test-results
           path: result.xml  # Se você gerar um arquivo XML com o resultado, como um relatório de testes
