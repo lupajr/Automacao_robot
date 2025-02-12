@@ -1,0 +1,15 @@
+name: Approve PR to Main
+
+on:
+  pull_request:
+    branches:
+      - main  # Roda apenas quando o PR é direcionado para a main
+
+jobs:
+  approve:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Approve PR
+        uses: hmarr/auto-approve-action@v3
+        with:
+          github-token: ${{ secrets.GH_PAT }}
