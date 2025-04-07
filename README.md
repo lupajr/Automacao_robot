@@ -48,12 +48,12 @@ Certifique-se de ter instalado os seguintes requisitos:
 
 Para executar todos os testes, utilize o seguinte comando:
 ```sh
-robot -d results tests/
+robot --include teste testes.robot
 ```
 
 Ou, para executar um teste específico:
 ```sh
-robot -d results tests/seu_teste.robot
+robot --include teste testes.robot/seu_teste.robot
 ```
 
 ## 📜 Licença
