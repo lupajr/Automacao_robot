@@ -1,7 +1,7 @@
 *** Settings ***
 Library      Browser
-Library      DebugLibrary
-Library      String
+Library    DebugLibrary
+Library    String
 Variables    ../page/login.yaml
 Variables    ../page/loja.yaml
 Resource     ../resource/variaveis.resource
