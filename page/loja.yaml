@@ -1,3 +1,4 @@
 button_pesquisar:             //button[@data-testid="botaoPesquisar"]
 button_adicionar_a_lista:     //button[@data-testid="adicionarNaLista"]
 txt_produto:                  //*[@class="card-body"][contains(.,"Produto")]
+button_detalhes:              //a[contains(.,"Detalhes")]

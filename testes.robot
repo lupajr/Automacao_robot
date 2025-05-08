@@ -31,4 +31,9 @@ cenário: adicionando item a lista
     Dado que esteja logado no sistema
     Quando selecionar para adicionar um produto na lista de compras 
     Então deverá ter um produto na lista de compras 
-    
+
+cenário: validar detalhes de produtos
+    Dado que esteja logado no sistema
+    Quando selecionar para adicionar um produto na lista de compras 
+    E clicar em detalhes do produto
+    Então deverá validar os detalhes do produto
