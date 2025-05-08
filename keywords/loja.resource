@@ -24,4 +24,12 @@ selecionar para adicionar um produto na lista de compras
 deverá ter um produto na lista de compras 
     Wait For Elements State    ${txt_produto}    visible 
     Should Contain   ${txt_produto}    Produto
-    
+
+clicar em detalhes do produto
+    ${elementos}    Get Elements    ${button_detalhes}  
+    ${indice_aleatorio}    Evaluate    random.randint(0, len(${elementos}) - 1)  
+    Click    ${elementos}[${indice_aleatorio}]  
+
+deverá validar os detalhes do produto
+    ${el}    Get Element By    TEXT    name=Descrição        
+    Wait For Elements State    ${el}    visible    timeout=15s

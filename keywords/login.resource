@@ -6,7 +6,7 @@ Resource     ../resource/variaveis.resource
 
 *** Keywords ***
 que abro Navegador
-    New Browser    chromium    headless=True
+    New Browser    chromium    headless=False
     New Page       https://front.serverest.dev/login
 insiro um email valido
     Fill Text    ${input_login_email}    ${email}
