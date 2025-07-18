@@ -10,7 +10,7 @@ Resource     ./login.resource
 *** Keywords ***
 
 que esteja logado no sistema
-    que abro Navegador
+    Acessar pagina com sucesso
     insiro um email valido
     insiro uma senha 
     clico em entrar 
