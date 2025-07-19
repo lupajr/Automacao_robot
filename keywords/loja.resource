@@ -10,7 +10,7 @@ Resource     ./login.resource
 *** Keywords ***
 
 que esteja logado no sistema
-    que abro Navegador
+    Acessar pagina com sucesso
     insiro um email valido
     insiro uma senha 
     clico em entrar 
@@ -26,10 +26,12 @@ deverá ter um produto na lista de compras
     Should Contain   ${txt_produto}    Produto
 
 clicar em detalhes do produto
+    Wait For Elements State    ${button_detalhes}    visible    
     ${elementos}    Get Elements    ${button_detalhes}  
-    ${indice_aleatorio}    Evaluate    random.randint(0, len(${elementos}) - 1)  
-    Click    ${elementos}[${indice_aleatorio}]  
+    ${indice_aleatorio}    Evaluate    random.choice(${elementos}) 
+    Click    ${indice_aleatorio}
 
+    
 deverá validar os detalhes do produto
     ${el}    Get Element By    TEXT    name=Descrição        
     Wait For Elements State    ${el}    visible    timeout=15s

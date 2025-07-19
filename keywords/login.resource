@@ -3,11 +3,12 @@ Library      Browser
 Variables    ../page/login.yaml
 Variables    ../page/loja.yaml
 Resource     ../resource/variaveis.resource
+Resource     ../resource/global_keywords.resource
 
 *** Keywords ***
 que abro Navegador
-    New Browser    chromium    headless=True
-    New Page       https://front.serverest.dev/login
+    Acessar pagina com sucesso
+
 insiro um email valido
     Fill Text    ${input_login_email}    ${email}
 insiro uma senha 

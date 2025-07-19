@@ -6,7 +6,6 @@ Resource     ../resource/variaveis.resource
 
 *** Keywords ***
 
-
 clico em cadastre-se 
     Click    ${button_cadastrar-se}   
 digito um nome

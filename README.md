@@ -44,6 +44,11 @@ Certifique-se de ter instalado os seguintes requisitos:
    rfbrowser init
    ```
 
+4. **Instale a Libary Invoke:**
+   ```sh
+   pip install invoke
+   ```
+
 ## ▶️ Executando os Testes
 
 Para executar todos os testes, utilize o seguinte comando:
