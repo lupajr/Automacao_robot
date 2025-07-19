@@ -3,7 +3,7 @@ Library      Browser
 Variables    ../page/login.yaml
 Variables    ../page/loja.yaml
 Resource     ../resource/variaveis.resource
-Resource     ../resource/global_config.resource
+Resource     ../resource/global_keywords.resource
 
 *** Keywords ***
 que abro Navegador

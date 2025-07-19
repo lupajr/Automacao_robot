@@ -8,7 +8,7 @@ Library     DebugLibrary
 *** Test Cases ***
 
 cenário: teste de cadastro bem-sucedido
-    [tags]    teste  
+    [tags]    teste  ci
     Dado que abro Navegador
     Quando clico em cadastre-se 
     E digito um nome
@@ -19,7 +19,7 @@ cenário: teste de cadastro bem-sucedido
     E o navegador irá fechar 
 
 cenário: teste de Login Bem-sucedido
-    [tags]    teste
+    [tags]    teste    ci
     Dado que abro Navegador
     Quando insiro um email valido
     E insiro uma senha 
@@ -27,12 +27,13 @@ cenário: teste de Login Bem-sucedido
     Então deverá aparecer mensagem de sucesso
 
 cenário: adicionando item a lista
-    [tags]    teste
+    [tags]    teste    ci
     Dado que esteja logado no sistema
     Quando selecionar para adicionar um produto na lista de compras 
     Então deverá ter um produto na lista de compras 
 
 cenário: validar detalhes de produtos
+    [tags]    teste    ci
     Dado que esteja logado no sistema
     Quando selecionar para adicionar um produto na lista de compras 
     E clicar em detalhes do produto
